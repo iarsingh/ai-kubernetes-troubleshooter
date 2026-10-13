@@ -1,5 +1,12 @@
 # AI Kubernetes Troubleshooter
 
+## Overview
+
+A small troubleshooting agent that reads posted Kubernetes events and returns a hypothesis about the failure, such as telling a CrashLoop apart from an out-of-memory kill. The agent runs behind a `POST /agent/run` endpoint and refuses `kubectl delete`. A versioned `/v1` ops API adds workspaces, tenant isolation, job approval and audit records, and tests cover both the agent and the ops layer.
+
+- **Built with:** Python, pytest, Docker Compose, GitHub Actions
+- **Scope:** Local laptop lab with tests; it does not call a hosted model or change a cluster.
+
 <!-- project-guide:start -->
 ## Project guide
 
